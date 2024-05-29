@@ -1,0 +1,83 @@
+body{
+    font-family: 'Exo', sans-serif;
+  margin: 0;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background: #7b4397;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #000000;
+  max-width: 310px;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 0 5px #a1f3f7;
+}
+#rectangleCanvas {
+  display:block;
+  border: 2px solid rgb(255, 255, 255);
+  margin:auto;
+  margin-top: 1%;
+  height: 100%;
+  border-radius:10px;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 0 5px #a1f3f7;  
+  
+}
+
+#controls {
+  text-align: center;
+  margin-top: 30px;
+  
+}
+#controls input[type="number"],
+#controls input[type="color"] {
+  background-color: #f0f0f0;
+  color: black; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
+#controls label, #controls input {
+  margin-right: 5px;
+  color: aliceblue
+}
+#controls button{
+  color: black
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.footer a {
+  color: #0cffc6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 5px 0;
+}

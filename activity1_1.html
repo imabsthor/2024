@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1.1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="checkbox" id="btn" hidden>
+      <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </label>
+      <nav id="sidebar">
+        <div class="title">FLORES,VICTOR N.</div>
+        <ul class="list-items">
+          <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="activity1_1.html"><i class="fas fa-circle"></i>Activity 1.1</a></li>
+          <li><a href="activity1_2.html"><i class="fas fa-circle"></i>Activity 1.2</a></li>
+          <li><a href="activity1_3.html"><i class="fas fa-circle"></i>Activity 1.3</a></li>
+          <li><a href="activity2_1.html"><i class="fas fa-circle"></i>Activity 2.1</a></li>
+          <li><a href="activity2_2.html"><i class="fas fa-circle"></i>Activity 2.2</a></li>
+          <li><a href="activity2_3.html"><i class="fas fa-circle"></i>Activity 2.3</a></li>
+          <div class="icons">
+            <a href="https://www.facebook.com/imYoursMAB" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/itechthors/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/imabsthor" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@KuyaKoCute" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div class="content-wrapper">
+      <div class="text-right">
+        <h1>Computer Graphics Activities</h1>
+      </div>
+      <!--this is the patition for nav-->
+<body>
+    <div class="container">
+        <h1 class="center">Welcome to Connecthors!</h1>
+        <h2>Links:</h2>
+        <div class="social-icons center">
+            <a href="https://web.facebook.com/itechTHORS"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/itechthors/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="mailto:chillphotoshoot@gmail.com"><i class="fa fa-google" aria-hidden="true"></i></a>
+        </div>
+
+        <h2>Pictures:</h2>
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="image/image (1).jpg" alt="Placeholder Image 1">
+            </div>
+            <div class="slide">
+                <img src="image/image (2).jpg" alt="Placeholder Image 2">
+            </div>
+            <div class="slide">
+                <img src="image/image (3).jpg" alt="Placeholder Image 3">
+            </div>
+        </div>
+
+        <!-- Optional: Slide indicators/dots -->
+        <div class="dot-container">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <h2>About Us:</h2>
+        <div class="Welcome">
+            <div class="Welcome">
+                <p>Welcome to <b>Connecthors</b>, your one-stop destination for all your technology needs! Our team of experts specializes 
+                    in computer and printer repairs, ensuring that your devices are up and running smoothly in no time. 
+                    Whether it's a software glitch, hardware issue, or a printer malfunction, we've got you covered with prompt and reliable 
+                    service. Trust us to diagnose and fix any problem efficiently, so you can get back to work without skipping a beat.</p>
+                <p>In addition to our repair services, we also offer top-notch printing solutions to meet your business or personal needs. 
+                    From high-quality document printing to vibrant graphic design prints, we provide professional printing services 
+                    tailored to your specifications. Whether you require flyers, brochures, business cards, or other promotional materials, 
+                    our advanced printing technology ensures exceptional results every time. Let us handle your printing needs with precision 
+                    and attention to detail, so you can make a lasting impression on your clients or audience.</p>
+                <p>Looking to enhance your projects with professional editing and graphic art? Look no further! Our skilled editors and 
+                    graphic artists are here to bring your ideas to life. Whether you need help refining your written content or creating 
+                    eye-catching visuals for your website or marketing materials, we have the expertise to make your vision a reality. 
+                    With a keen eye for detail and a commitment to excellence, we'll help you stand out from the crowd and achieve your goals. 
+                    Explore our comprehensive editing and graphics services today and unleash the full potential of your projects!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+                dots[i].classList.remove('active-dot');
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.add('active-dot');
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function currentSlide(n) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+                dots[i].classList.remove('active-dot');
+            }
+            slideIndex = n;
+            slides[n - 1].classList.add('active');
+            dots[n - 1].classList.add('active-dot');
+        }
+
+        showSlides(); // Initial call to start the slideshow
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+*{
+    margin: 0; 
+    padding: 0; 
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    position: relative;
+    justify-content:center;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    z-index: 1; 
+}
+
+.image img {
+    height: 250px; 
+    width: 250px; 
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+}
+
+.main {
+    position: relative;
+    z-index: 0;
+    padding-top: 50px; 
+    background: rgb(0, 0, 0);
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    max-width: 2000px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background: #ffffff;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: sans-serif;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.3);
+    transition: all .3s ease-out;
+}
+.icon:hover{
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.icon:hover i{
+    color: #fff;
+}
+.icon .fa-facebook-f{
+    color: #1A6ED8;
+}
+.fb:hover{
+    background: #1A6ED8;
+}
+.icon .fa-x-twitter{
+    color: #000000;
+}
+.twt:hover{
+    background: #000000;
+}
+.icon .fa-linkedin-in{
+    color: #0077B5;
+}
+.lnk:hover{
+    background: #0077B5;
+}
+.icon .fa-github{
+    color: #000;
+}
+.git:hover{
+    background: #000;
+}
+.icon .fa-youtube{
+    color: #FE0000;
+}
+.yt:hover{
+    background: #FE0000;
+}
+.icon .fa-instagram{
+    background-image: linear-gradient(to right,#4F5BD5, #962FBF, #D62976,#FA7E1E,#FEDA75);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.ins:hover{
+    background: linear-gradient(to right, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+}
+.icon .fa-tiktok{
+    background-image: linear-gradient(to right, #00f2ea,#000000, #ff0050);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.tt:hover{
+    background: linear-gradient(to right, #000, #00f2ea, #ff0050);
+   
+}
+.icon .fa-envelope  {
+    color: linear-gradient
+}
+.ema:hover{
+    background: #FE0000;
+}
+.icon .fa-threads{
+    background-image: linear-gradient(to right, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.td:hover{
+    background: linear-gradient(to right, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+}
+.icon .fa-pinterest{
+    color: #FE0000;
+}
+.pt:hover{
+    background: red
+   
+}
+ 
+@media only screen and (max-width: 480px) {
+    .image {
+        height: 30vh;
+    }
+
+    .icon {
+        width: 50px; 
+        height: 50px; 
+        font-size: 25px; 
+        line-height: 50px;
+        margin: 5px; 
+    }
+
+    .icon:hover {
+        width: 150px; }
+    }

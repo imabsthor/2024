@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2.3</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="checkbox" id="btn" hidden>
+      <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </label>
+      <nav id="sidebar">
+        <div class="title">FLORES,VICTOR N.</div>
+        <ul class="list-items">
+          <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="activity1_1.html"><i class="fas fa-circle"></i>Activity 1.1</a></li>
+          <li><a href="activity1_2.html"><i class="fas fa-circle"></i>Activity 1.2</a></li>
+          <li><a href="activity1_3.html"><i class="fas fa-circle"></i>Activity 1.3</a></li>
+          <li><a href="activity2_1.html"><i class="fas fa-circle"></i>Activity 2.1</a></li>
+          <li><a href="activity2_2.html"><i class="fas fa-circle"></i>Activity 2.2</a></li>
+          <li><a href="activity2_3.html"><i class="fas fa-circle"></i>Activity 2.3</a></li>
+          <div class="icons">
+            <a href="https://www.facebook.com/imYoursMAB" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/itechthors/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/imabsthor" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@KuyaKoCute" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <div class="content-wrapper">
+      <div class="text-right">
+        <h1>Computer Graphics Activities</h1>
+      </div>
+      <!--this is the patition for nav-->
+<head>
+    <title>Canvas Transformations</title>
+    <link rel="stylesheet" href="css/styles23.css">
+</head>
+<body onload="init();">
+    <h2>Translate</h2>
+    <!-- First Canvas for Translation -->
+    <canvas id="translateCanvas" width="500" height="400" style="border: 1px solid black; margin: 10px;"></canvas>
+    <h2>Rotate</h2>
+    <!-- Second Canvas for Rotation -->
+    <canvas id="rotateCanvas" width="500" height="400" style="border: 1px solid black; margin: 10px;"></canvas>
+   
+    <script>
+        function init() {
+            translate();
+            rotate();
+        }
+
+        function translate() {
+            var canvas = document.getElementById("translateCanvas");
+            var context = canvas.getContext("2d");
+
+          
+            context.fillStyle = 'red';
+            context.fillRect(25, 25, 100, 75);
+
+            context.translate(75, 75);
+            context.fillStyle = 'green';
+            context.fillRect(25, 25, 100, 75);
+
+            context.save();
+            context.translate(100, 50);
+            context.fillStyle = 'blue';
+            context.fillRect(25, 25, 100, 75);
+
+         
+            context.restore();
+            context.fillStyle = 'yellow';
+            context.fillRect(125, 125, 50, 50);
+        }
+
+        function rotate() {
+            var canvas = document.getElementById("rotateCanvas");
+            var context = canvas.getContext("2d");
+
+            context.fillStyle = 'red';
+            context.fillRect(25, 25, 100, 75);
+
+           
+            context.translate(150, 150);
+
+            context.rotate(45 * Math.PI / 180);
+
+            context.fillStyle = 'green';
+            context.fillRect(-50, -50, 100, 75);
+            
+            context.rotate(30 * Math.PI / 180);
+            context.fillStyle = 'blue';
+            context.fillRect(-75, -75, 100, 75);
+        }
+    </script>
+</body>
+</html>
